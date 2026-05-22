@@ -1,7 +1,7 @@
-import com.sleeptap.SleepTapApp
 package com.sleeptap.logic
 
 import android.content.Context
+import com.sleeptap.SleepTapApp
 import com.sleeptap.data.*
 import kotlinx.coroutines.*
 import java.util.concurrent.TimeUnit
