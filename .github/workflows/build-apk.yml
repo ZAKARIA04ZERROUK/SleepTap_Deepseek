@@ -17,17 +17,14 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Download Gradle wrapper files
+      - name: Download Gradle wrapper (overwrite)
         run: |
-          if [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
-            wget -O gradle/wrapper/gradle-wrapper.jar \
-              https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar
-          fi
-          if [ ! -s gradlew ]; then
-            wget -O gradlew \
-              https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradlew
-            chmod +x gradlew
-          fi
+          mkdir -p gradle/wrapper
+          wget -O gradle/wrapper/gradle-wrapper.jar \
+            https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar
+          wget -O gradlew \
+            https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradlew
+          chmod +x gradlew
 
       - name: Build debug APK
         run: ./gradlew assembleDebug
