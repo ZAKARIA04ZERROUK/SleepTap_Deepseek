@@ -35,7 +35,7 @@ fun SleepTapTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = Typography(),
         content = content
     )
 }

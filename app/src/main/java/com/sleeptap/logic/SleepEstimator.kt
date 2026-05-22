@@ -1,3 +1,4 @@
+import com.sleeptap.SleepTapApp
 package com.sleeptap.logic
 
 import android.content.Context
