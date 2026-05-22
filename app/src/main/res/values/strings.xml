@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SleepTap</string>
+    <string name="accessibility_service_description">SleepTap tracks your interaction to estimate sleep. No data leaves your device.</string>
+</resources>
